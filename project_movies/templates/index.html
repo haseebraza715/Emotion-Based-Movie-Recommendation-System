@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emotion-Based Movie Recommendation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Choose an Emotion to Get Movie Recommendations</h1>
+      <form action="/recommend" method="post">
+        <label for="preference">Select Emotion:</label>
+        <select id="preference" name="preference">
+          <option value="uplifting">Uplifting</option>
+          <option value="intense">Intense</option>
+          <option value="dark">Dark</option>
+          <option value="thought-provoking">Thought-Provoking</option>
+          <option value="romantic">Romantic</option>
+          <option value="humorous">Humorous</option>
+        </select>
+        <button type="submit">Get Recommendations</button>
+      </form>
+      <p>
+        <a href="/about"
+          >Learn more about how this recommendation system works</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

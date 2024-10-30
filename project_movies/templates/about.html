@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Emotion-Based Movie Recommendation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="about-container">
+      <h1 class="about-heading">
+        How the Emotion-Based Movie Recommendation System Works
+      </h1>
+
+      <div class="step">
+        <h2 class="step-title">1. Fetching Popular Movies</h2>
+        <p>
+          We retrieve a list of popular movies using The Movie Database (TMDb)
+          API. This gives us a wide range of movies that are currently popular
+          with audiences.
+        </p>
+      </div>
+
+      <div class="step">
+        <h2 class="step-title">2. Collecting User Reviews</h2>
+        <p>
+          For each movie, we gather user reviews and analyze the text for
+          sentiment and emotional impact. These reviews provide insights into
+          how viewers feel about each movie.
+        </p>
+      </div>
+
+      <div class="step">
+        <h2 class="step-title">3. Sentiment and Emotion Analysis</h2>
+        <p>
+          We use two sentiment analysis tools, VADER and TextBlob, to analyze
+          each review. Here’s what each tool provides:
+        </p>
+        <p>
+          <strong>VADER:</strong> Measures the overall sentiment of each review,
+          determining if it’s positive, neutral, or negative.
+        </p>
+        <p>
+          <strong>TextBlob:</strong> Detects polarity (positivity or negativity)
+          and subjectivity, which reflects how strongly an opinion is expressed.
+        </p>
+      </div>
+
+      <div class="step">
+        <h2 class="step-title">4. Creating Emotional Profiles</h2>
+        <p>
+          Based on the analysis, each movie is given an
+          <i>emotional profile</i> with scores that represent categories like
+          "uplifting," "intense," "dark," "thought-provoking," "romantic," and
+          "humorous." These profiles help us understand the dominant emotions
+          associated with each movie.
+        </p>
+      </div>
+
+      <div class="step">
+        <h2 class="step-title">5. Matching Your Preferences</h2>
+        <p>
+          When you select an emotional preference, the system recommends movies
+          with matching profiles. For example, if you choose "uplifting," the
+          system will prioritize movies with high positive sentiment scores.
+        </p>
+      </div>
+
+      <div class="step">
+        <h2 class="step-title">6. Continuous Improvement</h2>
+        <p>
+          We continuously refine the emotional analysis based on feedback and
+          improve the accuracy of the recommendations. This way, the system
+          becomes better at predicting the emotional impact of each movie over
+          time.
+        </p>
+      </div>
+
+      <a href="/" class="back-button">Back to Home</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion-Based Movie Recommendation System</title>
+    <style>
+      /* General Styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Header Styling */
+      h1,
+      h2 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+        color: #0fa4af;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        color: #333;
+        margin-top: 25px;
+      }
+
+      /* Paragraph Styling */
+      p {
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+
+      /* List Styling */
+      ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      /* Highlighted Section Styling */
+      .highlight {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-left: 5px solid #0fa4af;
+        margin-bottom: 20px;
+      }
+
+      /* Responsive Media Query */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5em;
+        }
+
+        h2 {
+          font-size: 1.2em;
+        }
+
+        .container {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Emotion-Based Movie Recommendation System</h1>
+
+      <h2>Introduction</h2>
+      <p>
+        This project is an Emotion-Based Movie Recommendation System that
+        suggests movies based on their likely emotional impact. Using natural
+        language processing (NLP) techniques, it analyzes user reviews to
+        determine the emotional tone of each movie and categorizes them into
+        various emotional types, such as "uplifting," "intense," "dark,"
+        "thought-provoking," "romantic," and "humorous." This project
+        demonstrates how NLP can be combined with web development frameworks to
+        create a functional, user-centered recommendation tool.
+      </p>
+
+      <h2>Project Overview</h2>
+      <p>
+        The project uses Python’s Flask framework for the web interface and
+        relies on NLP libraries such as VADER and TextBlob to analyze the
+        sentiment and subjectivity of user reviews for each movie. By fetching
+        data from The Movie Database (TMDb) API, the application can access
+        popular movies, gather user reviews, and provide emotionally categorized
+        recommendations based on user preferences.
+      </p>
+
+      <h2>Requirements</h2>
+      <ul>
+        <li>Python (version 3.6+)</li>
+        <li>
+          Libraries and Modules:
+          <ul>
+            <li>Flask</li>
+            <li>Requests</li>
+            <li>Dotenv</li>
+            <li>Numpy</li>
+            <li>NLTK and VADER Sentiment Analysis</li>
+            <li>TextBlob</li>
+          </ul>
+        </li>
+        <li>API Key from TMDb</li>
+        <li>Basic HTML/CSS Knowledge</li>
+      </ul>
+
+      <h2>Tools Used</h2>
+      <div class="highlight">
+        <ul>
+          <li>
+            Flask: A lightweight web framework for creating RESTful
+            applications.
+          </li>
+          <li>
+            VADER and TextBlob: NLP tools for analyzing text sentiment and
+            subjectivity.
+          </li>
+          <li>TMDb API: Provides movie information and user reviews.</li>
+          <li>Requests Library: To fetch data from TMDb API.</li>
+        </ul>
+      </div>
+
+      <h2>Step-by-Step Code Explanation</h2>
+      <p>
+        1. Setting Up the Project Environment: Install required libraries and
+        obtain an API key from TMDb.
+      </p>
+      <p>
+        2. Creating Flask App Structure: Set up the project structure with Flask
+        and necessary files.
+      </p>
+      <p>
+        3. Core Logic in app.py: Initialize Flask app, set up data collection,
+        analysis, and recommendation functions.
+      </p>
+      <p>
+        4. Front-End Development: Develop HTML templates and CSS for user
+        interface.
+      </p>
+      <p>
+        5. Running the Application: Run the Flask app locally and access it in
+        the browser.
+      </p>
+
+      <h2>How It Works</h2>
+      <ul>
+        <li>
+          Fetching Data: The app fetches popular movies and their reviews using
+          TMDb API.
+        </li>
+        <li>
+          Analyzing Reviews: VADER and TextBlob analyze each review for
+          sentiment and polarity.
+        </li>
+        <li>
+          Dynamic Thresholds and Category Matching: Adaptive thresholds
+          categorize movies by emotional type.
+        </li>
+        <li>
+          User Interface: Users select an emotional category, and the app
+          displays recommendations.
+        </li>
+      </ul>
+
+      <h2>Pros and Cons</h2>
+      <p><strong>Pros:</strong></p>
+      <ul>
+        <li>User-Centric Design</li>
+        <li>Hands-On NLP Experience</li>
+        <li>Modular Code Structure</li>
+      </ul>
+      <p><strong>Cons:</strong></p>
+      <ul>
+        <li>Limited to TMDb Reviews</li>
+        <li>Keyword Limitations</li>
+        <li>Rule-Based Limitations</li>
+      </ul>
+
+      <h2>How This Project Helps in Software Engineering</h2>
+      <ul>
+        <li>API Integration</li>
+        <li>Modular Code Design</li>
+        <li>Data Analysis and NLP</li>
+        <li>UI/UX Development</li>
+        <li>Testing and Iterative Improvement</li>
+      </ul>
+
+      <h2>Possible Extensions</h2>
+      <ul>
+        <li>Enhanced Emotion Detection with BERT</li>
+        <li>User Feedback System</li>
+        <li>Machine Learning Classification</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>
+        This Emotion-Based Movie Recommendation System combines data analysis,
+        NLP, and web development skills to create a practical recommendation
+        tool. By refining recommendation logic and incorporating user feedback,
+        this project showcases how software engineering principles can be
+        applied to solve real-world problems.
+      </p>
+    </div>
+  </body>
+</html>

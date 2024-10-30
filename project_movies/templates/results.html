@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recommendations</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Recommendations for {{ preference }} Movies</h1>
+      <ul>
+        {% for title, score in recommendations %}
+        <li>{{ title }} - Score: {{ score }}</li>
+        {% endfor %}
+      </ul>
+      <a href="/" class="back-button">Back to Home</a>
+    </div>
+  </body>
+</html>
